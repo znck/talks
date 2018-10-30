@@ -1,0 +1,9 @@
+{
+	"dependencies": {
+		"@vue/component-compiler-utils": "^2.2.0",
+		"prettier": "^1.14.3",
+		"raw-loader": "^0.5.1",
+		"vue-template-compiler": "^2.5.17",
+		"vue-template-es2015-compiler": "^1.6.0"
+	}
+}
