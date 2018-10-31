@@ -280,15 +280,13 @@
       </CodePreview>
     </SectionSlide>
     <Slide>
-      <Fit>
-        Mike drop!
-      </Fit>
+      <Fit><img src="./assets/mike-drop.gif" /></Fit>
     </Slide>
 
     <SectionSlide>
       <template slot="title">
         Test with<br />
-        <strong>Confidence</strong>
+        <strong>Confidence</strong><br />
       </template>
     </SectionSlide>
     <TemplateDemoSlide title="Removing Test IDs" :files="files" active="Testable" explorer="TestExample" />
@@ -330,6 +328,9 @@
         }
       </CodePreview>
     </SectionSlide>
+    <Slide>
+      <Fit><img src="./assets/spit-out.gif" /></Fit>
+    </Slide>
 
     <Slide><Fit><small>ALL</small></Fit></Slide>
     <Slide><Fit><small>THE</small></Fit></Slide>
