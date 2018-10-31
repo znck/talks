@@ -5,25 +5,25 @@
     <Fit>
       <Title class="title">Rahul Kadyan</Title>
       <section class="links">
-        <a href="https://twitter.com/@znck0">@znck0</a> | <a href="https://znck.me" target="_blank">znck.me</a>
+        <a href="https://twitter.com/@znck0"><strong>@znck0</strong></a> | <a href="https://znck.me" target="_blank">znck.me</a>
       </section>
       <section class="about">
         <div class="position">
           <img src="../assets/vue.png" />
           <div class="name">Contributor</div>
-          <div class="company">Vue Ecosystem</div>
+          <small class="company">Vue Ecosystem</small>
         </div>
 
         <div class="position">
           <img src="../assets/myntra.png" />
           <div class="name">Software Developer</div>
-          <div class="company">Myntra Designs</div>
+          <small class="company">Myntra Designs</small>
         </div>
 
         <div class="position">
           <img src="../assets/vue-blr.png" />
           <div class="name">Organiser</div>
-          <div class="company">VueBLR</div>
+          <small class="company">VueBLR/VueIN</small>
         </div>
       </section>
     </Fit>

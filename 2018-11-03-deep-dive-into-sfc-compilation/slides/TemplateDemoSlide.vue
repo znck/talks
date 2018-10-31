@@ -1,13 +1,18 @@
 <template>
-  <SplitSlide>
-    <SplitPane vertical>
-      <FileBrowserWindow :files="files" :active="active" @pick="file = $event" />
-      <ComponentPreview :component="component" />
+  <Slide>
+    <p class="bottom-title">
+      Current Topic: <b>{{ title }}</b>
+    </p>
+    <SplitPane>
+      <SplitPane vertical>
+        <FileBrowserWindow :files="files" :active="active" @pick="file = $event" />
+        <ComponentPreview :component="component" />
+      </SplitPane>
+      <component :is="explorer" v-if="file" :code="file.content" :component.sync="component">
+        {{ title }}
+      </component>
     </SplitPane>
-    <component :is="explorer" v-if="file" :code="file.content" :component.sync="component">
-      {{ title }}
-    </component>
-  </SplitSlide>
+  </Slide>
 </template>
 
 <script>
@@ -30,7 +35,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

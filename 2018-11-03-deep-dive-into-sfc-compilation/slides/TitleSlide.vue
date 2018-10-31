@@ -13,7 +13,7 @@
 .title-slide {
   padding: 10%;
   /* background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .9), rgba(0, 0, 0, .3)), url("../assets/mystery.jpg"); */
-  background-image: url("../assets/mystery.jpg");
+  background-image: url("../assets/deep-dive.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -24,7 +24,8 @@
 
 .subtitle {
   color: white;
-  margin-bottom: -2em;
+  margin-bottom: -0.5em;
+  margin-left: 0.5em;
   font-size: 0.7rem;
 }
 </style>

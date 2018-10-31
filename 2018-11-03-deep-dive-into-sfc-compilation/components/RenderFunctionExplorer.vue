@@ -6,7 +6,7 @@
 
         <select v-model="optimize">
           <option :value="true">(optimized)</option>
-          <option :value="false">(unoptimized)</option>
+          <option :value="false"></option>
         </select>
       </slot>
     </template>

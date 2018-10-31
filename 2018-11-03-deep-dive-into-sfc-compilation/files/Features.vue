@@ -1,17 +1,18 @@
-<template>
-  <div>
-    <span>{{ expr }} interpolation</span>
+<!-- Add attribute -->
+<p v-bind:class="className" />
 
-    <div v-for="i in 5" :key="i">
-      loop/iteration
-    </div>
+<!-- Attach handler -->
+<button v-on:click="alert('clicked')" />
 
-    <button v-on:click="alert('clicked')">event handling</button>
+<!-- Print text -->
+{{ text }}
 
-    <p v-bind:class="className">dynamic attributes</p>
+<!-- Check condition -->
+<span v-if="one" />
+<span v-else-if="two" />
+<span v-else />
 
-    <span v-if="one">if condition</span>
-    <span v-else-if="two">chained if condition</span>
-    <span v-else></span>
-  </div>
-</template>
+<!-- Repeat element -->
+<div v-for="i in 5" :key="i">
+  loop/iteration
+</div>

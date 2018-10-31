@@ -2,7 +2,9 @@
   <section class="licence">
     <p>MIT License</p>
 
-    <header>Copyright (c) {{ new Date().getFullYear() }} Jane Doe</header>
+    <header>
+      Copyright (c) {{ new Date().getFullYear() }} Jane Doe
+    </header>
 
     <p>
       Permission is hereby granted, free of charge, to any person obtaining a copy

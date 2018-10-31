@@ -3,7 +3,7 @@
     <p>Hello Jane!</p>
 
     <p>
-      This is a <em>static sub tree</em>.
+      This is a <em>static tree</em>.
     </p>
   </div>
 </template>
