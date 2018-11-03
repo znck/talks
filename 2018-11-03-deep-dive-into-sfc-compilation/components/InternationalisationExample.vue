@@ -7,6 +7,7 @@
         <option value="en">EN</option>
         <option value="es">ES</option>
         <option value="hi">HI</option>
+        <option value="ja">JA</option>
       </select>
     </template>
     <CodePreview language="javascript">{{ output }}</CodePreview>
