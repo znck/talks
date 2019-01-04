@@ -1,6 +1,6 @@
 <template>
   <SidebarSlide sidebar-no-padding>
-    <img slot="aside" class="author" src="../assets/znck.jpg" />
+    <img slot="aside" class="author" src="../assets/znck-alt.jpg" />
 
     <Fit>
       <Title class="title">Rahul Kadyan</Title>

@@ -1,13 +1,19 @@
 <template>
   <Keynote aspect-ratio="16x9">
-    <TitleSlide />
-    <AuthorSlide />
+    <TitleSlide transition="push" />
+    <Slide transition="push">
+      <Fit>
+        <img src="./assets/vuefes.jpg" />
+      </Fit>
+    </Slide>
+
+    <AuthorSlide transition="push" />
 
     <Slide>
       <Fit>
         <p>
           <small>Slides at</small><br />
-          <a href="https://znck.surge.sh"><strong>znck</strong>.surge.sh</a>
+          <a href="https://github.com/znck/talks">github.com/<strong>znck</strong>/talks</a>
         </p>
       </Fit>
     </Slide>
@@ -75,7 +81,7 @@
     <Slide>
       <Fit>
         <small>Static</small><br />
-        Optimisation
+        Optimization
       </Fit>
     </Slide>
     
@@ -86,7 +92,11 @@
       </Fit>
     </Slide>
     
-    <Slide />
+    <Slide>
+      <Fit>
+        Templates
+      </Fit>
+    </Slide>
 
     <Slide>
       <Fit>
@@ -332,16 +342,28 @@
       <Fit><img src="./assets/spit-out.gif" /></Fit>
     </Slide>
 
-    <Slide><Fit><small>ALL</small></Fit></Slide>
-    <Slide><Fit><small>THE</small></Fit></Slide>
-    <Slide><Fit>HACKERS</Fit></Slide>
-    <Slide><Fit><small>AND</small></Fit></Slide>
-    <Slide><Fit><strong>CONTRIBUTORS</strong></Fit></Slide>
-    <Slide><Fit><small>NEXT</small></Fit></Slide>
-    <Slide><Fit><small>SLIDE</small></Fit></Slide>
-    <Slide><Fit><small>IS</small></Fit></Slide>
-    <Slide><Fit><small>FOR</small></Fit></Slide>
-    <Slide><Fit><strong>YOU</strong></Fit></Slide>
+    <Slide><Fit><small>
+      <!-- ALL  -->
+      すべての</small></Fit></Slide>
+    <!-- <Slide><Fit><small>THE</small></Fit></Slide> -->
+    <Slide><Fit>
+      <!-- HACKERS　 -->
+      ハッカー</Fit></Slide>
+    <Slide><Fit><small>
+      <!-- AND　 -->
+      と</small></Fit></Slide>
+    <Slide><Fit><strong>
+      <!-- CONTRIBUTORS　 -->
+      コントリビュータへ</strong></Fit></Slide>
+    <Slide><Fit><small>
+      <!-- NEXT　 -->
+      つぎのスライドは</small></Fit></Slide>
+    <!-- <Slide><Fit><small>SLIDE</small></Fit></Slide> -->
+    <!-- <Slide><Fit><small>IS</small></Fit></Slide> -->
+    <Slide><Fit><small>
+      <!-- FOR　 -->
+      あなたがたのためです</small></Fit></Slide>
+    <!-- <Slide><Fit><strong>YOU</strong></Fit></Slide> -->
     <Slide>
       <Fit>
         <h1>
