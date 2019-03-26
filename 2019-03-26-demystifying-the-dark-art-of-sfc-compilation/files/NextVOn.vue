@@ -1,0 +1,10 @@
+<template>
+  <div 
+    v-on:foo="bar" 
+    v-on:[foo]="bar" 
+    v-on="someObject"></div>
+  <div 
+    @foo="bar" 
+    @[foo]="bar"
+    @="someObject"></div>
+</template>

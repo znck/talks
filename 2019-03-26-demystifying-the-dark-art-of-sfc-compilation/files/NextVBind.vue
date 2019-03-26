@@ -1,0 +1,10 @@
+<template>
+  <div 
+    v-bind:foo="bar" 
+    v-bind:[foo]="bar" 
+    v-bind="someObject"></div>
+  <div 
+    :foo="bar" 
+    :[foo]="bar" 
+    :="someObject"></div>
+</template>

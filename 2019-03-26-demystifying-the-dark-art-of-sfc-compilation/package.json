@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"scripts": {
+		"start": "keynote serve"
+	},
+	"dependencies": {
+		"@keynote/cli": "link:../../keynote/packages/cli",
+		"@vue/component-compiler-utils": "^2.6.0",
+		"de-indent": "^1.0.2",
+		"prettier": "^1.16.4",
+		"prismjs": "^1.15.0", 
+		"raw-loader": "^0.5.1",
+		"vue-template-compiler": "^2.6.10",
+		"vue-template-es2015-compiler": "^1.9.1"
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"trailingComma": "es5"
+	}
+}

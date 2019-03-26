@@ -79,6 +79,8 @@ export default {
       </span>
     </PhotoHorizontalSlide>
 
+    <PhotoSlide class="template-ex" photo="./assets/sfc.png" alt="Single File Component" />
+
     <!-- Template -->
     <PhotoHorizontalSlide photo="./assets/take-templates.gif" title="Take templates" />
     <TitleSlide>
@@ -157,6 +159,10 @@ export default {
 </template>
 
 <style>
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .video {
   width: 100%;
   object-fit: contain;
