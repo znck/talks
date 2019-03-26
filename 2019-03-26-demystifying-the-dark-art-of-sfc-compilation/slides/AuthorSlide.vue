@@ -1,8 +1,8 @@
 <template>
   <SectionSlide size="small" style="text-align: center">
-    <span style="color: #999">github.com/</span>znck </br>
-    <span style="color: #999">twitter.com/</span>znck0 </br>
-    znck.dev
+    vueconf19-compiler<span style="color: #999">.surge.sh</span><br>
+    <span style="color: #999">github.com/</span>znck<span style="color: #999">/talks</span> <br> znck.dev<br>
+    <span style="color: #999">twitter.com/</span>znck0<br>
   </SectionSlide>
 </template>
 
@@ -11,8 +11,8 @@ import SidebarSlide from './SidebarSlide.vue'
 
 export default {
   components: {
-    SidebarSlide
-  }
+    SidebarSlide,
+  },
 }
 </script>
 

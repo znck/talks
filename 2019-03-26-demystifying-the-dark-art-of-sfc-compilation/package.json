@@ -1,7 +1,9 @@
 {
 	"private": true,
 	"scripts": {
-		"start": "keynote serve"
+		"start": "keynote serve",
+		"build": "keynote build",
+		"deploy": "surge dist vueconf19-compiler.surge.sh"
 	},
 	"dependencies": {
 		"@keynote/cli": "link:../../keynote/packages/cli",

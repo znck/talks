@@ -35,8 +35,8 @@ export default {
 }
 
 .title::before {
-  content: '🍌';
-  font-size: 2em;
+  content: '🌟';
+  font-size: 1.2em;
   line-height: .75;
 }
 </style>

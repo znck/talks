@@ -46,34 +46,49 @@
       </div>
     </SplitSlide>
     
-    <SplitSlide title class="padded-container" minion="focus.png" style="background-position: 100% 88%; background-size: 30%;">
-      <template #title>
-        A quick over<span style="color: var(--text-color)">vue</span> | Key Focus Areas
-      </template>
-
-      <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center;">
-        <h2>Minions</h2>
-      </div>
-    </SplitSlide>
-    
     <SplitSlide title class="padded-container focus-areas">
       <template #title>
         A quick over<span style="color: var(--text-color)">vue</span> | Key Focus Areas
       </template>
 
       <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center; margin-top: -4em; color: green;">
-        <h2>Whats</h2>
+        <h2>What</h2>
       </div>
       <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center; margin-top: -4em; color: green;">
-        <h2>Whys</h2>
+        <h2>Why</h2>
       </div>
-      <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center; margin-top: -4em; color: red;">
-        <h2>Hows</h2>
+      <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center; margin-top: -4em; text-decoration: line-through;">
+        <h2>How</h2>
       </div>
     </SplitSlide>
 
-    <TemplateDemoSlide title="Testable Components" :files="files" active="Testable" explorer="TestExample"/>
-    <TemplateDemoSlide title="Internationalization" :files="files" active="Internationalisation" explorer="InternationalisationExample" />
+    <Slide class="text-w4 padded-container">
+      <h1>Testable Components</h1>
+
+      <CodePreview lang="vue">
+        &lt;button data-test="login-button"&gt;
+          Login
+        &lt;/button&gt;
+      </CodePreview>
+    </Slide>
+
+    <SplitSlide title>
+      <template #title>
+         Testable Components
+        <img src="./assets/magic.png" class="slide-intro-test-minion">
+      </template>
+      <FileBrowserWindow :files="files" active="Testable"/>
+      <FileBrowserWindow :files="files" active="TestableProd"/>
+    </SplitSlide>
+    
+    <SplitSlide title>
+      <template #title>
+        Compile-time Internationalization
+        <img src="./assets/magic.png" class="slide-intro-test-minion">
+      </template>
+      <FileBrowserWindow :files="files" active="IntEx"/>
+      <FileBrowserWindow :files="files" active="IntExES"/>
+    </SplitSlide>
 
     <SectionSlide
       minion="what"
@@ -165,6 +180,10 @@
       </div>
     </SplitSlide>
 
+    <SectionSlide size="small" minion="overvue.png" style="background-size: 50%; background-position: 0% 100%">
+      <div style="margin-left: 10em">Parse SFC <br>into Blocks</div>
+    </SectionSlide>
+
     <SplitSlide title>
       <FileBrowserWindow :files="files" active="CompileScript" @pick="file = $event" />
       <SfcExplorer :code="file ? file.content : ''" />
@@ -205,6 +224,12 @@
       </div>
     </SplitSlide>
 
+    <SectionSlide size="small" minion="overvue.png" style="background-size: 50%; background-position: 0% 100%">
+      <div style="margin-left: 10em">
+        Compile <br>Script Block
+      </div>
+    </SectionSlide>
+
     <SplitSlide title>
       <template #title>
          Compile each block | Script Block
@@ -240,6 +265,12 @@
       </div>
     </SplitSlide>
 
+    <SectionSlide size="small" minion="overvue.png" style="background-size: 50%; background-position: 0% 100%">
+      <div style="margin-left: 10em">
+        Compile <br>Style Block
+      </div>
+    </SectionSlide>
+
     <SplitSlide title>
       <template #title>
         Compile each block | Style Block
@@ -268,7 +299,7 @@
     <SectionSlide
       class="compiling-template-slide"
       size="small"
-      title="Compiling Templates!"
+      title="Compile Template Block"
       minion="run"
       style="background-size: 45%; background-position: 0% 100%"
     />
@@ -436,79 +467,88 @@
       <FileBrowserWindow :files="files" active="CompileScript-CodegenSimple"/>
     </SplitSlide>
 
-    <SectionSlide
-      size="small"
-      minion="magic.png"
-      style="background-size: 75%; background-position: 50% 100%;"
-    >
-      Some
-      <code style="color: var(--text-color)">with(this)</code> Magic
+    <SplitSlide title class="padded-container" minion="actual-overvue.png" style="background-position: 100% 88%; background-size: 27%;">
+      <template #title>
+        A quick over<span style="color: var(--text-color)">vue</span>
+      </template>
+
+      <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center;">
+        <h2>Compilation Process</h2>
+
+        <ul style="text-align: left">
+          <li style="text-decoration: line-through">Parse SFC to blocks</li>
+          <li style="text-decoration: line-through">Compile each block <br>(script, style, template)</li>
+          <li>Combine all blocks</li>
+        </ul>
+      </div>
+    </SplitSlide>
+
+    <SplitSlide title>
+      <FileBrowserWindow :files="files" active="CompileScript" @pick="file = $event" />
+      <SfcExplorer :code="file ? file.content : ''" />
+      <template #title>
+        Parse SFC to blocks
+        <img src="./assets/okay.png" class="slide-compile-list-minion">
+      </template>
+    </SplitSlide>
+
+    <SplitSlide title>
+      <template #title>
+        Compile each block | Script Block
+        <img src="./assets/deep-think.png" class="slide-compile-script-minion">
+      </template>
+      <FileBrowserWindow :files="files" active="CompileScript"/>
+      <FileBrowserWindow :files="files" active="CompileScript-Script"/>
+    </SplitSlide>
+
+    <SplitSlide title>
+      <template #title>
+        Compile each block | Style Block
+        <img src="./assets/cool.png" class="slide-compile-style-minion">
+      </template>
+      <FileBrowserWindow :files="files" active="CompileScript"/>
+      <FileBrowserWindow :files="files" active="CompileScript-Style"/>
+    </SplitSlide>
+
+    <SplitSlide title>
+      <template #title>
+        Compile each block | Template Block
+        <img src="./assets/parse.png" class="slide-compile-template-p-minion">
+        <img src="./assets/towel.png" class="slide-compile-template-c-minion">
+      </template>
+      <FileBrowserWindow :files="files" active="CompileScript"/>
+      <FileBrowserWindow :files="files" active="CompileScript-CodegenSimple"/>
+    </SplitSlide>
+
+    <SectionSlide size="small" minion="overvue.png" style="background-size: 50%; background-position: 0% 100%">
+      <div style="margin-left: 10em">
+        Combine <br>all blocks
+      </div>
     </SectionSlide>
 
     <SplitSlide title>
       <template #title>
-        Compiling Template |
-        <em>with(this)</em>
-        <img src="./assets/magic.png" class="slide-compile-template-with-this-minion">
+        Combine all blocks
+        <img src="./assets/meet.jpg" class="slide-compile-minion">
       </template>
-      <FileBrowserWindow :files="files" active="CompileScript-CodegenSimpleWithThis"/>
-      <FileBrowserWindow :files="files" active="CompileScript-CodegenSimple"/>
+      <FileBrowserWindow :files="files" active="CompileScript"/>
+      <FileBrowserWindow :files="files" active="CompileScript-Output"/>
     </SplitSlide>
 
-    <Slide>
-      <img src="./assets/with-this.png" style="width: 100%">
-    </Slide>
-
-    <Slide>
-      <img src="./assets/with-this.png" style="width: 100%">
-      <img
-        src="./assets/stop.jpg"
-        style="width: 40%; right: 0; bottom: calc(2.84 * var(--kem)); position: absolute; mix-blend-mode: darken;"
-      >
-      <div
-        class="text-w2"
-        style="color: red; position: absolute; top: 35%; left: 25%; transform: rotate(-45deg); text-shadow: 2px 2px 4px rgba(0, 0, 0, .54)"
-      >DO NOT USE WITH!</div>
-    </Slide>
-
-    <TemplateDemoSlide title="Template Compilation" :files="exampleFiles" active="ExampleGreeting"/>
-    <SplitSlide class="split-4" title>
+    <SplitSlide title class="padded-container" minion="actual-overvue.png" style="background-position: 100% 88%; background-size: 27%;">
       <template #title>
-        Template Compilation
-        <img src="./assets/live.gif" class="live">
+        A quick over<span style="color: var(--text-color)">vue</span>
       </template>
-      <SplitPane :active-index="activePane">
-        <FileBrowserWindow
-          :files="exampleFiles"
-          @pick="file = $event"
-          active="ExampleGreeting"
-          @maximize="activate(0)"
-          @minimize="activate(null)"
-        />
-        <ASTExplorer
-          v-if="file"
-          :code="file.content"
-          @maximize="activate(1)"
-          @minimize="activate(null)"
-        />
-        <RenderFunctionExplorer
-          v-if="file"
-          :code="file.content"
-          :strip-with="false"
-          @maximize="activate(2)"
-          @minimize="activate(null)"
-        >
-          <span slot="title">Render Function</span>
-        </RenderFunctionExplorer>
-        <RenderFunctionExplorer
-          v-if="file"
-          :code="file.content"
-          @maximize="activate(3)"
-          @minimize="activate(null)"
-        >
-          <span slot="title">Transpiled Render Function</span>
-        </RenderFunctionExplorer>
-      </SplitPane>
+
+      <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center;">
+        <h2>Compilation Process</h2>
+
+        <ul style="text-align: left">
+          <li style="text-decoration: line-through">Parse SFC to blocks</li>
+          <li style="text-decoration: line-through">Compile each block <br>(script, style, template)</li>
+          <li style="text-decoration: line-through">Combine all blocks</li>
+        </ul>
+      </div>
     </SplitSlide>
 
     <SectionSlide
@@ -526,64 +566,62 @@
       <em>JavaScript</em>.
     </SectionSlide>
 
-    <SplitSlide title>
-      <template #title>
-        Compiling Script
-        <img src="./assets/deep-think.png" class="slide-compile-script-minion">
-      </template>
-      <FileBrowserWindow :files="files" active="CompileScript"/>
-      <FileBrowserWindow :files="files" active="CompileScript-Script"/>
-    </SplitSlide>
-
-    <SplitSlide title>
-      <template #title>
-        Compiling Style
-        <img src="./assets/cool.png" class="slide-compile-style-minion">
-      </template>
-      <FileBrowserWindow :files="files" active="CompileScript"/>
-      <FileBrowserWindow :files="files" active="CompileScript-Style"/>
-    </SplitSlide>
-
-    <SplitSlide title>
-      <template #title>
-        Compiling Template |
-        <em>compile(template)</em>
-        <img src="./assets/parse.png" class="slide-compile-template-p-minion">
-        <img src="./assets/towel.png" class="slide-compile-template-c-minion">
-      </template>
-      <FileBrowserWindow :files="files" active="CompileScript"/>
-      <FileBrowserWindow :files="files" active="CompileScript-CodegenSimple"/>
-    </SplitSlide>
-
-    <SplitSlide title>
-      <template #title>
-        Compiling Template |
-        <em>compile(SFC)</em>
-        <img src="./assets/meet.jpg" class="slide-compile-minion">
-      </template>
-      <FileBrowserWindow :files="files" active="CompileScript"/>
-      <FileBrowserWindow :files="files" active="CompileScript-OutputPreBundler"/>
-    </SplitSlide>
-
-    <SplitSlide title>
-      <template #title>
-        Compiling Template |
-        <em>compile(SFC)</em>
-        <img src="./assets/meet.jpg" class="slide-compile-minion">
-      </template>
-      <FileBrowserWindow :files="files" active="CompileScript"/>
-      <FileBrowserWindow :files="files" active="CompileScript-Output"/>
-    </SplitSlide>
-
-    <SectionSlide minion="whaaaa" style="text-align: right; background-size: 30%">
-      Why
-      <br>do I need
-      <br>to know this?
+    <SectionSlide size="small" minion="test.png" style="background-size: 50%; background-position: 0 100%">
+      <div style="margin-left: 55%">Testable Components</div>
     </SectionSlide>
+
+    <SplitSlide title>
+      <template #title>
+         Testable Components
+        <img src="./assets/magic.png" class="slide-intro-test-minion">
+      </template>
+      <FileBrowserWindow :files="files" active="Testable"/>
+      <FileBrowserWindow :files="files" active="TestableProd"/>
+    </SplitSlide>
+
+    <TemplateDemoSlide title="Testable Components" :files="files" active="Testable" explorer="TestExample"/>
+    
+    <SplitSlide title="Removing data-test during compilation">
+      <div>
+        <CodePreview class="text-w5" language="js" @click.stop="() => {}">
+          function postTransformNode(node) {
+            if (node.attrs) {
+              node.attrs = node.attrs.filter(
+                ({ name }) => name !== 'data-test'
+              )
+            }
+            if (Array.isArray(node.children)) {
+              node.children.map(postTransformNode)
+            }
+          }
+        </CodePreview>
+        <img src="./assets/test.png" style="position: absolute; bottom: 3em; width: 25%; right: 0;" />
+      </div>
+    </SplitSlide>
+
+    <SplitSlide title="vue.config.js">
+      <div>
+        <CodePreview class="text-w5" language="js" @click.stop="() => {}">
+          module.exports = {
+            chainWebpack: config => {
+              config.module.rule('vue').use('vue-loader')
+                .tap(options => {
+                  options.modules = {
+                    ...options.modules,
+                    postTransformNode
+                  }
+                  return options
+                })
+            }
+          }
+        </CodePreview>
+        <img src="./assets/test.png" style="position: absolute; bottom: 3em; width: 25%; right: 0;" />
+      </div>
+    </SplitSlide>
 
     <SectionSlide size="small" minion="smug" style="background-size: 35%">
       <div style="margin-left: 40%">
-        Static Internationalization
+        Compile-time Internationalization
       </div>
     </SectionSlide>
     
@@ -596,15 +634,15 @@
     <SplitSlide title="Internationalization">
       <div>
         <CodePreview class="text-w5" language="js" @click.stop="() => {}">
-          function postTransformNode(el) {
-            if (el.type === 2) {
-              el.text = findTranslation(el.text)
-              const { expression, tokens } = parseText(el.text)
-              el.expression = expression
-              el.tokens = tokens
+          function postTransformNode(node) {
+            if (node.type === 2) {
+              node.text = findTranslation(node.text)
+              const { expression, tokens } = parseText(node.text)
+              node.expression = expression
+              node.tokens = tokens
             }
-            if (Array.isArray(el.children)) {
-              el.children.map(postTransformNode)
+            if (Array.isArray(node.children)) {
+              node.children.map(postTransformNode)
             }
           }
         </CodePreview>
@@ -628,48 +666,6 @@
           }
         </CodePreview>
         <img src="./assets/config.png" style="position: absolute; bottom: 1em; width: 25%; right: 0;" />
-      </div>
-    </SplitSlide>
-
-    <SectionSlide size="small" minion="test.png" style="background-size: 50%; background-position: 0 100%">
-      <div style="margin-left: 55%">Testable Components</div>
-    </SectionSlide>
-    <TemplateDemoSlide title="Testable Components" :files="files" active="Testable" explorer="TestExample"/>
-    <SplitSlide title="Removing data-test during compilation">
-      <div>
-        <CodePreview class="text-w5" language="js" @click.stop="() => {}">
-          function postTransformNode(el) {
-            if (el.attrs) {
-              el.attrs = el.attrs.filter(
-                ({ name }) => name !== 'data-test'
-              )
-            }
-            if (Array.isArray(el.children)) {
-              el.children.map(postTransformNode)
-            }
-          }
-        </CodePreview>
-        <img src="./assets/test.png" style="position: absolute; bottom: 3em; width: 25%; right: 0;" />
-      </div>
-    </SplitSlide>
-
-    <SplitSlide title="vue.config.js">
-      <div>
-        <CodePreview class="text-w5" language="js" @click.stop="() => {}">
-          module.exports = {
-            chainWebpack: config => {
-              config.module.rule('vue').use('vue-loader')
-                .tap(options => {
-                  options.modules = {
-                    ...options.modules,
-                    postTransformNode
-                  }
-                  return options
-                })
-            }
-          }
-        </CodePreview>
-        <img src="./assets/test.png" style="position: absolute; bottom: 3em; width: 25%; right: 0;" />
       </div>
     </SplitSlide>
 
@@ -681,6 +677,22 @@
       <div class="flex">
         <iframe style="width: 100%" src="https://template-explorer.vuejs.org/" />
         <img src="./assets/cool.png" style="position: absolute; right: 0; bottom: 4em; width: 10em" />
+      </div>
+    </SplitSlide>
+
+    <SplitSlide title class="padded-container" minion="actual-overvue.png" style="background-position: 100% 88%; background-size: 27%;">
+      <template #title>
+        A quick summary | Things to Remember
+      </template>
+
+      <div class="text-w4 flex flex-direction-column flex-align-center flex-justify-center" style="text-align: center;">
+        <h1 style="margin: 0; padding: 0">Summary</h1>
+        <ul style="text-align: left">
+          <li>Compiler is a series of simple steps</li>
+          <li>Override/extend compiler (postTransformNode)</li>
+          <li>Vue CLI config allows extending compiler</li>
+          <li>Everything is possible!</li>
+        </ul>
       </div>
     </SplitSlide>
 
@@ -848,6 +860,13 @@ code {
   bottom: 2.5kem;
 }
 
+.slide-intro-test-minion {
+  position: absolute;
+  width: 40kem;
+  left: 65kem;
+  bottom: 2.5kem;
+}
+
 .slide-compile-no-script-minion {
   position: absolute;
   width: 22kem;
@@ -941,9 +960,9 @@ code {
 
 .focus-areas {
   background: 
-    url('./assets/focus.png') 100% 88% no-repeat, 
-    url('./assets/deep-think.png') 50% 88% no-repeat,
-    url('./assets/what.jpg') 15% 88% no-repeat; 
-  background-size: 30%, 16%, 15%;
+    url('./assets/what.jpg') 50% 88% no-repeat,
+    url('./assets/focus.png') 0% 88% no-repeat, 
+    url('./assets/deep-think.png') 90% 88% no-repeat; 
+  background-size: 15%, 30%, 16%;
 }
 </style>

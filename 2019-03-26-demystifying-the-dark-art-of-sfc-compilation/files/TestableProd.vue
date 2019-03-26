@@ -1,5 +1,5 @@
 <template>
-  <button data-test="button" @click="logIn">
+  <button @click="logIn">
     Login
   </button>
 </template>
