@@ -781,6 +781,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
 .slideshow:focus {
   outline: none;
 }
