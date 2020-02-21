@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "@vue/compiler-core": "^3.0.0-alpha.5"
+  }
+}
