@@ -1,6 +1,6 @@
 <template>
   <Window v-on="$listeners" v-bind="$attrs">
-    <select slot="title" class="selector" v-model.number="index" @click.stop="() => {}">
+    <select v-if="true" slot="title" class="selector" v-model.number="index" @click.stop="() => {}">
       <option v-for="(item, i) in files" :value="i" :key="item.name">{{ item.name }}</option>
     </select>
 

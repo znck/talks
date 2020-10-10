@@ -1,0 +1,50 @@
+{
+	"folders": [
+		{
+			"name": "Experience of the new Vue",
+			"path": "2020-01-17-experience-of-the-new-vue"
+		},
+		{
+			"name": "2018-10-18-demystifying-the-dark-art-of-sfc-compilation",
+			"path": "2018-10-18-demystifying-the-dark-art-of-sfc-compilation"
+		},
+		{
+			"name": "utils",
+			"path": "utils"
+		},
+		{
+			"name": "2018-10-28-pace-up-with-vue",
+			"path": "2018-10-28-pace-up-with-vue"
+		},
+		{
+			"name": "2018-11-03-deep-dive-into-sfc-compilation",
+			"path": "2018-11-03-deep-dive-into-sfc-compilation"
+		},
+		{
+			"name": "2019-01-05-stealing-ideas-from-vue",
+			"path": "2019-01-05-stealing-ideas-from-vue"
+		},
+		{
+			"name": "2019-03-26-demystifying-the-dark-art-of-sfc-compilation",
+			"path": "2019-03-26-demystifying-the-dark-art-of-sfc-compilation"
+		},
+		{
+			"name": "2019-08-30-future-of-vue",
+			"path": "2019-08-30-future-of-vue"
+		},
+		{
+			"name": "2020-02-21-new-vue-new-compiler",
+			"path": "2020-02-21-new-vue-new-compiler"
+		},
+		{
+			"name": "2020-03-20-inversion-of-control",
+			"path": "2020-03-20-inversion-of-control"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+		"prettier.printWidth": 50,
+		"prettier.singleQuote": true,
+		"prettier.trailingComma": "all"
+	}
+}
