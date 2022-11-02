@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.36.7",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "markdown-it-shiki-twoslash": "^2.1.0"
+  }
+}
